@@ -9,7 +9,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 makedepends=('cmake')
 source=('git://git.tizen.org/tools/lthor.git' 'udev-rules.patch')
-sha256sums=('SKIP' 'b5b977266a61d5c38840ea534e2b91deb4a8ce10e72b86912e6fb2f82391ea2b')
+sha256sums=('SKIP' 'ac3440e8e38b7940da9b0081acbcf9b9389290471c0463743db31eaa26c76eda')
 
 build() {
   cd $srcdir/lthor
