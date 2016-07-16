@@ -1,0 +1,9 @@
+diff --git a/99-lthor.rules b/99-lthor.rules
+index dcd694d..33d0213 100644
+--- a/99-lthor.rules
++++ b/99-lthor.rules
+@@ -1,2 +1,4 @@
+ SUBSYSTEM=="tty", KERNEL=="ttyACM*", MODE="0666"
+ SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{idVendor}=="04e8", ATTRS{idProduct}=="685d", ENV{ID_MM_CANDIDATE}="null"
++BUS=="usb", SYSFS{idVendor}=="04e8", SYSFS{idProduct}=="685d", RUN+="/sbin/modprobe cdc_acm"
++BUS=="usb", SYSFS{idVendor}=="04e8", SYSFS{idProduct}=="685d", RUN+="/bin/sh -c 'echo 04e8 685d > /sys/bus/usb/drivers/cdc_acm/new_id'"
