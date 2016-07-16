@@ -8,7 +8,7 @@ pkgdesc="Firmware uploader for Tizen Development devices"
 arch=('i686' 'x86_64')
 license=('GPL')
 makedepends=('cmake')
-source=('git://git.tizen.org/tools/lthor.git' 'udev-rules.patch')
+source=('git+https://git.tizen.org/cgit/tools/lthor.git#branch=release-20160615' 'udev-rules.patch')
 sha256sums=('SKIP' 'ac3440e8e38b7940da9b0081acbcf9b9389290471c0463743db31eaa26c76eda')
 
 build() {
